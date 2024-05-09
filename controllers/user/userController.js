@@ -48,7 +48,7 @@ const loginController =  async (req,res)=> {
     maxAge:1000*3600*7, //PONEMOS EL TIEMPO DE VIDA DEL TOKEN
     httpOnly:false,
     secure:true, //!IMPORTANTE, HAY QUE PASARLO A TRUE y tennerlo en false en desarrollo
-    sameSite: "lax"
+    sameSite: "none"
   })
 
   return res.status(200).send({
